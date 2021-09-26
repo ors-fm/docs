@@ -10,7 +10,7 @@ Attributes
 
 name
 ----
-This is a string, with a minimum of 2 and a maximum of 50 characters (though shorter names are recommended), that defines the package name. It will be the ``<pkgName>/version@user/channel`` of the package reference.
+This is a string, with a minimum of 2 and a maximum of 50 characters (though shorter names are recommended), that defines the package name. It will be the ``<pkgName>`` of the package reference ``<pkgName>/version@user/channel``.
 It should match the following regex ``^[a-zA-Z0-9_][a-zA-Z0-9_\+\.-]{1,50}$``, so start with alphanumeric or underscore, then alphanumeric, underscore, +, ., - characters.
 
 The name is only necessary for ``export``-ing the recipe into the local cache (``export`` and ``create`` commands), if they are not defined in the command line.
@@ -20,7 +20,7 @@ However, the most common and suggested approach would be to define it in plain t
 
 version
 -------
-The version attribute will define the version part of the package reference: ``pkgName/<version>@user/channel``
+The version attribute will define the version part ``version`` of the package reference ``pkgName/<version>@user/channel``.
 It is a string, and can take any value, matching the same constraints as the ``name`` attribute.
 In case the version follows semantic versioning in the form ``X.Y.Z-pre1+build2``, that value might be used for requiring this package through version ranges instead of exact versions.
 
